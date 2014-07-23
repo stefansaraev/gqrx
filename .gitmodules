@@ -1,0 +1,3 @@
+[submodule "gr-dsd"]
+	path = gr-dsd
+	url = https://github.com/argilo/gr-dsd.git

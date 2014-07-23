@@ -49,6 +49,7 @@ DockRxOpt::DockRxOpt(qint64 filterOffsetRange, QWidget *parent) :
         ModulationStrings.append("USB");
         ModulationStrings.append("CW-L");
         ModulationStrings.append("CW-U");
+        ModulationStrings.append("DSD");
     }
     ui->modeSelector->addItems(ModulationStrings);
 
@@ -170,7 +171,7 @@ int  DockRxOpt::currentFilter()
  */
 void DockRxOpt::setCurrentDemod(int demod)
 {
-    if ((demod >= MODE_OFF) && (demod <= MODE_CWU))
+    if ((demod >= MODE_OFF) && (demod <= MODE_DSD))
         ui->modeSelector->setCurrentIndex(demod);
 }
 

@@ -211,11 +211,14 @@ PKGCONFIG += gnuradio-analog \
              gnuradio-blocks \
              gnuradio-filter \
              gnuradio-fft \
-             gnuradio-osmosdr
+             gnuradio-osmosdr \
+             gnuradio-digital
 
 unix:!macx {
     LIBS += -lboost_system$$BOOST_SUFFIX -lboost_program_options$$BOOST_SUFFIX
     LIBS += -lrt  # need to include on some distros
+    LIBS += -lgr-dsd
+    INCLUDEPATH += $$PWD/gr-dsd/include $$PWD/gr-dsd/dsd $$PWD/gr-dsd/mbelib
 }
 
 macx {

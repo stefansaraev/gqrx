@@ -725,6 +725,11 @@ receiver::status receiver::set_demod(rx_demod demod)
         rx->set_demod(nbrx::NBRX_DEMOD_SSB);
         break;
 
+    case RX_DEMOD_DSD:
+        connect_all(RX_CHAIN_NBRX);
+        rx->set_demod(nbrx::NBRX_DEMOD_DSD);
+        break;
+
     default:
         ret = STATUS_ERROR;
         break;
